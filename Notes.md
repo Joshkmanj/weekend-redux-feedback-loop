@@ -14,3 +14,18 @@ Make 4 pages, each is it's own route
     [ ] submit button
 <!-- [ ] Thank you Page
     [ ] return to home button -->
+
+
+
+Tasks:
+<!-- D O N E----------------------------------------------
+ ----D O N E -------------------------------------------------------->
+-- Link pages in App
+-- create next buttons
+-- Feeling reducer
+-- Understanding reducer
+-- Suppor reducer
+-- Comments reducer
+-- Review page useSelector
+-- 
+-- 
