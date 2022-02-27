@@ -7,9 +7,10 @@ function Understanding({submitHandler}){
     const history = useHistory();
     const dispatchType = 'SET_UNDERSTANDING';
     const nextDestination = '/Support';
+    let payload = understanding;
 
     function clickSubmit() {
-        submitHandler(understanding,dispatchType) ? history.push(nextDestination) : console.log('Error submitting');
+        submitHandler(payload,dispatchType) ? history.push(nextDestination) : console.log('Error submitting');
     }
 
 
