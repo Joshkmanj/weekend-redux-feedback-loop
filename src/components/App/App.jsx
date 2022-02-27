@@ -57,13 +57,19 @@ function App() {
         />
       </Route>
       <Route path='/Understanding' exact>
-        <Understanding  />
+        <Understanding  
+        submitHandler={submitHandler} 
+        />
       </Route>
       <Route path='/Support' exact>
-        <Support  />
+        <Support  
+          submitHandler={submitHandler} 
+        />
       </Route>
       <Route path='/Comments' exact>
-        <Comments  />
+        <Comments  
+          // submitHandler={submitHandler} 
+        />
       </Route>
       <Route path='/Review' exact>
         <Review  />
