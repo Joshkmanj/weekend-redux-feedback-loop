@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-function Support(){
+function Support({submitHandler}){
 
     const [support, setSupport] = useState('')
     const history = useHistory();
     const dispatchType = 'SET_SUPPORT';
-    const nextDestination = '/Comment';
+    const nextDestination = '/Comments';
     let payload = support;
 
     function clickSubmit() {
