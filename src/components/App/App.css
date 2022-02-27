@@ -40,3 +40,7 @@ span{
   margin:10px;
   display: inline-block;
 }
+.faded-text{
+  color: slategray;
+  font-size: smaller;
+}

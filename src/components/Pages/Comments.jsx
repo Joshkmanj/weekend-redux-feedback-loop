@@ -13,11 +13,15 @@ function Comment({submitHandler}) {
         submitHandler(payload, dispatchType) & history.push(nextDestination) ;
     }
 
+    // This function here will alert the user before they reload the webpage and lose unsaved changes.
+    // window.onbeforeunload = function() {
+    //     return "Reloading may erase any unsaved changes!";
+    // }
 
     return (
         <div className="body">
             <div className="card">
-                <h3>Do you have any comments you'd like to add?</h3>
+                <h3>Are there any comments you'd like to add? <span className="faded-text">(Optional)</span></h3>
                 <textarea
                     rows={4}
                     cols={60}
