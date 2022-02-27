@@ -8,7 +8,7 @@ function Home() {
     const history = useHistory();
 
     const clickSubmit = ()=>{
-        history.push('/Feeling');
+        history.push('/morale');
     }
 
     return (

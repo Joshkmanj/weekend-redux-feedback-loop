@@ -38,9 +38,14 @@ span{
 }
 .next{
   margin:10px;
-  display: inline-block;
+  display: block;
+  float: right;
 }
 .faded-text{
   color: slategray;
   font-size: smaller;
+}
+.answer{
+  /* display: inline-block; */
+  float: right;
 }

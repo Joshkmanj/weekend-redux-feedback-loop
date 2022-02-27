@@ -6,7 +6,7 @@ function Support({submitHandler}){
     const [support, setSupport] = useState('')
     const history = useHistory();
     const dispatchType = 'SET_SUPPORT';
-    const nextDestination = '/Comments';
+    const nextDestination = '/comments';
     let payload = support;
 
     function clickSubmit() {
@@ -25,7 +25,7 @@ function Support({submitHandler}){
                             value={support}
                             onChange={(event) => { setSupport(event.target.value) }}
                             type="range"
-                            min={1} max={5} />
+                            min={0} max={5} />
                          Very supported</span>
                     <button 
                     className="next"

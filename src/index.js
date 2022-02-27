@@ -14,7 +14,7 @@ import logger from 'redux-logger';
 
 
 const currentRatings = (state = {
-    feelsRating: '',
+    morale: '',
     understanding: '',
     support: '',
     comment: '',
@@ -24,10 +24,10 @@ const currentRatings = (state = {
     // This could be used for future functionality where on the review page,
     // any and all data could be edited.
 
-    if (action.type === 'SET_FEELS') {
+    if (action.type === 'SET_MORALE') {
         return {
             ...state,
-            feelsRating: action.payload
+            morale: action.payload
         }
     } else if (action.type === 'SET_UNDERSTANDING') {
         return {

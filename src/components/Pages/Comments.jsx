@@ -6,7 +6,7 @@ function Comment({submitHandler}) {
     const [comment, setComment] = useState('')
     const history = useHistory();
     const dispatchType = 'SET_COMMENT';
-    const nextDestination = '/Review';
+    const nextDestination = '/review';
     let payload = comment;
 
     function clickSubmit() {

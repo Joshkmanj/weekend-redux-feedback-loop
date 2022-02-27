@@ -3,15 +3,15 @@ import { useHistory } from 'react-router-dom';
 // import { useDispatch } from 'react-redux'
 
 
-function Feeling({submitHandler}) {
+function Morale({submitHandler}) {
 
-    const [feelsRating, setFeelsRating] = useState('')
+    const [morale, setMorale] = useState('')
     const history = useHistory();
-    const dispatchType = 'SET_FEELS';
-    const nextDestination = 'Understanding'
+    const dispatchType = 'SET_MORALE';
+    const nextDestination = '/understanding'
 
     function clickSubmit() {
-        submitHandler(feelsRating,dispatchType) ? history.push('/Understanding') : console.log('Error submitting');
+        submitHandler(morale,dispatchType) ? history.push(nextDestination) : console.log('Error submitting');
     }
     
 
@@ -23,10 +23,10 @@ function Feeling({submitHandler}) {
                         <input
                             className="rating"
                             required
-                            value={feelsRating}
-                            onChange={(event) => { setFeelsRating(event.target.value) }}
+                            value={morale}
+                            onChange={(event) => { setMorale(event.target.value) }}
                             type="range"
-                            min={1} max={5} />
+                            min={0} max={5} />
                          Great</span>
                     <button 
                     className="next"
@@ -35,4 +35,4 @@ function Feeling({submitHandler}) {
         </div>
     )
 }
-export default Feeling;
+export default Morale;

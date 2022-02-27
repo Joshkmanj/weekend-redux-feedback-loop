@@ -9,8 +9,8 @@ Make 4 pages, each is it's own route
     [x] next button
 [x] Comments - optional
     [x] next button
-[ ] Review Page
-    [ ] Must show all values
+[x] Review Page
+    [x] Must show all values
     [ ] submit button
 <!-- [ ] Thank you Page
     [ ] return to home button -->
@@ -19,7 +19,6 @@ Make 4 pages, each is it's own route
 
 Tasks:
 <!-- D O N E----------------------------------------------
- ----D O N E -------------------------------------------------------->
 -- Link pages in App
 -- create next buttons
 -- Feeling reducer
@@ -27,5 +26,9 @@ Tasks:
 -- Suppor reducer
 -- Comments reducer
 -- Review page useSelector
+ ----D O N E -------------------------------------------------------->
+-- Review page submits
+-- Thank you
+-- 
 -- 
 -- 
