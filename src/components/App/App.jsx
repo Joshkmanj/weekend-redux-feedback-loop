@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux'
 
 // Importing the client side routes
 import Home from '../Pages/Home'
-import Feeling from '../Pages/Feeling'
+import Morale from '../Pages/Morale'
 import Understanding from '../Pages/Understanding'
 import Support from '../Pages/Support'
 import Comments from '../Pages/Comments'
@@ -51,27 +51,27 @@ function App() {
       <Route path='/' exact>
         <Home  />
       </Route>
-      <Route path='/Feeling' exact>
-        <Feeling 
+      <Route path='/morale' exact>
+        <Morale 
         submitHandler={submitHandler} 
         />
       </Route>
-      <Route path='/Understanding' exact>
+      <Route path='/understanding' exact>
         <Understanding  
         submitHandler={submitHandler} 
         />
       </Route>
-      <Route path='/Support' exact>
+      <Route path='/support' exact>
         <Support  
           submitHandler={submitHandler} 
         />
       </Route>
-      <Route path='/Comments' exact>
+      <Route path='/comments' exact>
         <Comments  
           submitHandler={submitHandler} 
         />
       </Route>
-      <Route path='/Review' exact>
+      <Route path='/review' exact>
         <Review  />
       </Route>
       </div>

@@ -6,7 +6,7 @@ function Understanding({submitHandler}){
     const [understanding, setUnderstanding] = useState('')
     const history = useHistory();
     const dispatchType = 'SET_UNDERSTANDING';
-    const nextDestination = '/Support';
+    const nextDestination = '/support';
     let payload = understanding;
 
     function clickSubmit() {
@@ -25,7 +25,7 @@ function Understanding({submitHandler}){
                             value={understanding}
                             onChange={(event) => { setUnderstanding(event.target.value) }}
                             type="range"
-                            min={1} max={5} />
+                            min={0} max={5} />
                          Very extensively</span>
                     <button 
                     className="next"
