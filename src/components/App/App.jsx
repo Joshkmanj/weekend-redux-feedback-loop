@@ -30,7 +30,7 @@ function App() {
     console.log('Page submitted with data:', payload);
     if (payload === ''){
         alert('Use the slider to pick a rating!')
-        return;
+        return false;
     }
     dispatch({
         type: dispatchType,

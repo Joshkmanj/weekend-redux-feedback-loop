@@ -8,18 +8,7 @@ function Feeling({submitHandler}) {
     const [feelsRating, setFeelsRating] = useState('')
     const history = useHistory();
     
-    // const submitHandler = () => {
-    //     console.log('Feelings page submit, chosen rating:', feelsRating);
-    //     if (feelsRating === ''){
-    //         alert('Use the slider to pick a rating!')
-    //         return;
-    //     }
-    //     dispatch({
-    //         type: "SET_FEELS",
-    //         payload: feelsRating
-    //     })
-    // }
-   
+
     const dispatchType = 'SET_FEELS';
     const nextDestination = 'Understanding'
 
