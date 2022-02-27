@@ -28,7 +28,7 @@ function App() {
 
   const submitHandler = (payload, dispatchType) => {
     console.log('Page submitted with data:', payload);
-    if (payload === ''){
+    if (payload === '' && dispatchType !== 'SET_COMMENT' ){
         alert('Use the slider to pick a rating!')
         return false;
     }

@@ -10,7 +10,7 @@ function Comment({submitHandler}) {
     let payload = comment;
 
     function clickSubmit() {
-        submitHandler(payload, dispatchType) ? history.push(nextDestination) : console.log('Error submitting');
+        submitHandler(payload, dispatchType) & history.push(nextDestination) ;
     }
 
 
