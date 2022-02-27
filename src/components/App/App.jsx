@@ -68,7 +68,7 @@ function App() {
       </Route>
       <Route path='/Comments' exact>
         <Comments  
-          // submitHandler={submitHandler} 
+          submitHandler={submitHandler} 
         />
       </Route>
       <Route path='/Review' exact>
