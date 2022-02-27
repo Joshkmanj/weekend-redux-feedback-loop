@@ -18,7 +18,7 @@ function Understanding({submitHandler}){
         <div className="body">
             <div className="card">
                 <h3>How much do you feel like you understand the material today?</h3>
-                    <span>Bad 
+                    <span>Very poorly 
                         <input
                             className="rating"
                             required
@@ -26,7 +26,7 @@ function Understanding({submitHandler}){
                             onChange={(event) => { setUnderstanding(event.target.value) }}
                             type="range"
                             min={1} max={5} />
-                         Great</span>
+                         Very extensively</span>
                     <button 
                     className="next"
                     onClick={clickSubmit}>Next</button>

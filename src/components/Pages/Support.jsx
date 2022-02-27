@@ -17,8 +17,8 @@ function Support({submitHandler}){
     return (
         <div className="body">
             <div className="card">
-                <h3>How much do you feel like you understand the material today?</h3>
-                    <span>Bad 
+                <h3>Do you feel supported?</h3>
+                    <span>Not at all 
                         <input
                             className="rating"
                             required
@@ -26,7 +26,7 @@ function Support({submitHandler}){
                             onChange={(event) => { setSupport(event.target.value) }}
                             type="range"
                             min={1} max={5} />
-                         Great</span>
+                         Very supported</span>
                     <button 
                     className="next"
                     onClick={clickSubmit}>Next</button>
