@@ -21,3 +21,15 @@
 h4 {
   font-style: italic;
 }
+.body{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+.card{
+  grid-column-start: 2;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding:40px;
+  box-shadow: 1px 1px 7px black;
+}
