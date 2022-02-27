@@ -33,3 +33,6 @@ h4 {
   padding:40px;
   box-shadow: 1px 1px 7px black;
 }
+.next{
+  display: block;
+}

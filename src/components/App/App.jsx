@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+
+
 
 
 // Importing the client side routes
@@ -14,18 +17,44 @@ import Review from '../Pages/Review'
 
 function App() {
 
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  // const testFunction = ()=>{
+  //   event.preventDefault
+  //   console.log('test function');
+  //   history.push('/Understanding')
+  // }
+
+  const submitHandler = (payload, dispatchType) => {
+    console.log('Page submitted with data:', payload);
+    if (payload === ''){
+        alert('Use the slider to pick a rating!')
+        return;
+    }
+    dispatch({
+        type: dispatchType,
+        payload: payload
+    })
+    return true;
+}
+
   return (
+
     <Router>
       <div className='App'>
         <header className='App-header'>
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
+          {/* <button onClick={testFunction}>Next</button> */}
         </header>
       <Route path='/' exact>
         <Home  />
       </Route>
       <Route path='/Feeling' exact>
-        <Feeling  />
+        <Feeling 
+        submitHandler={submitHandler} 
+        />
       </Route>
       <Route path='/Understanding' exact>
         <Understanding  />

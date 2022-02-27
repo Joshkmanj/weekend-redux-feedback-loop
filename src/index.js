@@ -12,20 +12,47 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 
-const feedbackData = (state = [], action) => {
 
-if (action.type === 'TYPE') {
-return [...state, action.payload];
-}
-// If action.type is anything else, it'll just return the last value of state.
-return state;
+const currentRatings = (state = {
+    feelsRating: '',
+    understanding: '',
+    support: '',
+    comment: '',
+}, action) => {
+
+    // const { feelsRating, understanding, support, comment } = action.payload; 
+    // This could be used for future functionality where on the review page,
+    // any and all data could be edited.
+
+    if (action.type === 'SET_FEELS') {
+        return {
+            ...state,
+            feelsRating: action.payload
+        }
+    } else if (action.type === 'SET_UNDERSTANDING') {
+        return {
+            ...state,
+            understanding: action.payload
+        }
+    } else if (action.type === 'SET_SUPPORT') {
+        return {
+            ...state,
+            support: action.payload
+        }
+    } else if (action.type === 'SET_COMMENT') {
+        return {
+            ...state,
+            comment: action.payload
+        }
+    }
+    return state;
 }
 
 
 
 const storeData = createStore(
     combineReducers({
-      feedbackData
+        currentRatings
     }),
     applyMiddleware(logger)
 )

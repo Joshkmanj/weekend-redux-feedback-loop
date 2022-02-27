@@ -1,26 +1,47 @@
 import { useState } from "react";
+import { useHistory } from 'react-router-dom';
+// import { useDispatch } from 'react-redux'
 
-function Feeling() {
 
-    const [feelRating, setFeelRating] = useState(1)
+function Feeling({submitHandler}) {
 
-    const ratingHandler = (val) => {
-        console.log(val);
-        setFeelRating(val)
+    const [feelsRating, setFeelsRating] = useState('')
+    const history = useHistory();
+    
+    // const submitHandler = () => {
+    //     console.log('Feelings page submit, chosen rating:', feelsRating);
+    //     if (feelsRating === ''){
+    //         alert('Use the slider to pick a rating!')
+    //         return;
+    //     }
+    //     dispatch({
+    //         type: "SET_FEELS",
+    //         payload: feelsRating
+    //     })
+    // }
+   
+    const dispatchType = 'SET_FEELS';
+    const nextDestination = 'Understanding'
+
+    function clickSubmit() {
+        submitHandler(feelsRating,dispatchType) ? history.push('/Understanding') : console.log('Error submitting');
     }
+    
 
     return (
         <div className="body">
             <div className="card">
                 <h3>How are you feeling today?</h3>
-                <span>Bad
-                    <input 
-                    className="rating" 
-                    value={feelRating}
-                    onChange={(event)=>{ratingHandler(event.target.value)}} 
-                    type="range" 
-                    min={1} max={5} />
-                    Great</span>
+                    <span>Bad
+                        <input
+                            className="rating"
+                            required
+                            value={feelsRating}
+                            onChange={(event) => { setFeelsRating(event.target.value) }}
+                            type="range"
+                            min={1} max={5} />
+                        Great</span>
+                    <button onClick={clickSubmit}>Next</button>
             </div>
         </div>
     )
