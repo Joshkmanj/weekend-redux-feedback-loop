@@ -1,21 +1,26 @@
-// import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 
 function Review(){
 
     const formData = useSelector(store => store.currentRatings)
+    const history = useHistory();
+    const nextDestination = '/confirmation';
 
 
-
-    const clickSubmit = ()=>{
-        console.log('Clicked submit');
-        
-    }
 
     const postData = () => {
 
-        axios.post()
+        axios.post('/survey', formData )
+        .then(response => {
+            console.log('POST req success!', response)
+            history.push(nextDestination)
+        })
+        .catch(error => {
+            console.error('POST req failed!', error)
+        })
     }
 
     return(
@@ -26,18 +31,18 @@ function Review(){
                 <h4 className="faded-text">Does everything look accurate?</h4>
 
 
-                <p>My morale today: <span className='answer'>{formData.morale} / 5</span></p>
+                <p>My morale today: <span className='answer'>{formData.feeling} / 5</span></p>
                 
                 <p>My understanding of the material: <span className='answer'>{formData.understanding} / 5</span></p>
                 
                 <p>The level of support I'm feeling: <span className='answer'>{formData.support} / 5</span></p>
                 
-                { formData.comment ? <p>{formData.comment}</p> : <p className="faded-text">No comment given</p> }
+                { formData.comments ? <p>{formData.comments}</p> : <p className="faded-text">No comments given</p> }
                 
 
                 <button
                     className="next"
-                    onClick={clickSubmit}
+                    onClick={postData}
                     >Submit</button>
 
             </div>
