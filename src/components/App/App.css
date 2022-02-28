@@ -1,3 +1,4 @@
+/* -------------------Structure------------------------ */
 .App {
   text-align: center;
 }
@@ -18,9 +19,7 @@
   font-size: large;
 }
 
-h4 {
-  font-style: italic;
-}
+
 .body{
   text-align: center;
   display: grid;
@@ -33,13 +32,17 @@ h4 {
   padding:40px;
   box-shadow: 1px 1px 7px black;
 }
+textarea{
+  padding: 10px;
+}
+/* -------------------END Structure------------------- */
+
+/* -------------------Text---------------------------- */
 span{
   display:block;
 }
-.next{
-  margin:10px;
-  display: block;
-  float: right;
+h4 {
+  font-style: italic;
 }
 .faded-text{
   color: slategray;
@@ -49,3 +52,27 @@ span{
   /* display: inline-block; */
   float: right;
 }
+/* -------------------END Text----------------------- */
+/* -------------------Buttons------------------------ */
+button{
+  border-radius: 7px;
+}
+button:hover{
+  filter: brightness(0.75);
+  transition: 0.2s;
+}
+.next{
+  margin:10px;
+  display: block;
+  float: right;
+  padding: 3px 15px;
+}
+.restart-button{
+  background-color: #3cff2a;
+  margin: 5px 10px
+}
+.home-button{
+  margin: 5px 10px;
+  background-color: #ff2525;
+}
+/* -------------------END Buttons------------------- */
