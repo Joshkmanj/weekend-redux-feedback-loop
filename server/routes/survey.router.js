@@ -11,10 +11,10 @@ router.post('/', (req, res) => {
 
     pool.query(queryText,[data.feeling, data.understanding, data.support, data.comments])
     .then(response =>{
-        console.log('Great success!');
+        console.log('Great success!', response);
         res.sendStatus(200)
     }).catch(error=>{
-        console.log('Great failure!');
+        console.log('Great failure!', error);
         res.sendStatus(500)
     })
 })
