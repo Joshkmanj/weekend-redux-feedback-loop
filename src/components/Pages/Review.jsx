@@ -7,15 +7,15 @@ function Review(){
     const formData = useSelector(store => store.currentRatings)
 
 
-
-    const clickSubmit = ()=>{
-        console.log('Clicked submit');
-        
-    }
-
     const postData = () => {
-
-        axios.post()
+        console.log('Sending post request!');
+        axios.post('/survey', formData )
+        .then(response => {
+            console.log('POST req success!', response)
+        })
+        .catch(error => {
+            console.log('POST req failed!', error)
+        })
     }
 
     return(
@@ -37,7 +37,7 @@ function Review(){
 
                 <button
                     className="next"
-                    onClick={clickSubmit}
+                    onClick={postData}
                     >Submit</button>
 
             </div>
