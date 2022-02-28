@@ -44,6 +44,13 @@ const currentRatings = (state = {
             ...state,
             comments: action.payload
         }
+    } else if (action.type === 'RESET'){
+        return {
+            feeling: '',
+            understanding: '',
+            support: '',
+            comments: '',
+        }
     }
     return state;
 }

@@ -48,6 +48,9 @@ h4 {
   color: slategray;
   font-size: smaller;
 }
+.comment-text{
+  color: slategray;
+}
 .answer{
   /* display: inline-block; */
   float: right;
