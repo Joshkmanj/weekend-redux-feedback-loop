@@ -4,8 +4,6 @@
 
 _Duration: Weekend Sprint_
 
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it?
-
 For this project I used Redux within a React app in order to pass data from different pages of a survey to a reducer on the index page. I reused functions wherever possible, which helped reduce the amount of logic that needed to be incorporated on every page. I used the history.push() function from React in order to move the user between pages seamlessly.
 
 
