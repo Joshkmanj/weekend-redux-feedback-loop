@@ -14,17 +14,11 @@ import Understanding from '../Pages/Understanding'
 import Support from '../Pages/Support'
 import Comments from '../Pages/Comments'
 import Review from '../Pages/Review'
+import Confirmation from '../Pages/Confirmation'
 
 function App() {
 
   const dispatch = useDispatch();
-  const history = useHistory();
-
-  // const testFunction = ()=>{
-  //   event.preventDefault
-  //   console.log('test function');
-  //   history.push('/Understanding')
-  // }
 
   const submitHandler = (payload, dispatchType) => {
     console.log('Page submitted with data:', payload);
@@ -73,6 +67,9 @@ function App() {
       </Route>
       <Route path='/review' exact>
         <Review  />
+      </Route>
+      <Route path='/confirmation' exact>
+        <Confirmation />
       </Route>
       </div>
     </Router>

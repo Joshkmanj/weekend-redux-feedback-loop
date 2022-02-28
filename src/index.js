@@ -14,10 +14,10 @@ import logger from 'redux-logger';
 
 
 const currentRatings = (state = {
-    morale: '',
+    feeling: '',
     understanding: '',
     support: '',
-    comment: '',
+    comments: '',
 }, action) => {
 
     // const { feelsRating, understanding, support, comment } = action.payload; 
@@ -27,7 +27,7 @@ const currentRatings = (state = {
     if (action.type === 'SET_MORALE') {
         return {
             ...state,
-            morale: action.payload
+            feeling: action.payload
         }
     } else if (action.type === 'SET_UNDERSTANDING') {
         return {
@@ -42,7 +42,7 @@ const currentRatings = (state = {
     } else if (action.type === 'SET_COMMENT') {
         return {
             ...state,
-            comment: action.payload
+            comments: action.payload
         }
     }
     return state;
