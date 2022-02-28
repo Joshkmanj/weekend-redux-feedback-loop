@@ -1,11 +1,12 @@
 import axios from 'axios';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 
 function Review(){
 
     const formData = useSelector(store => store.currentRatings)
+    const dispatch = useDispatch();
     const history = useHistory();
     const nextDestination = '/confirmation';
 
@@ -16,6 +17,9 @@ function Review(){
         axios.post('/survey', formData )
         .then(response => {
             console.log('POST req success!', response)
+            dispatch({
+                type: 'RESET'
+            })
             history.push(nextDestination)
         })
         .catch(error => {
@@ -37,7 +41,7 @@ function Review(){
                 
                 <p>The level of support I'm feeling: <span className='answer'>{formData.support} / 5</span></p>
                 
-                { formData.comments ? <p>{formData.comments}</p> : <p className="faded-text">No comments given</p> }
+                { formData.comments ? <p>Comment:<span className="comment-text">{formData.comments}</span></p> : <p className="faded-text">No comments given</p> }
                 
 
                 <button

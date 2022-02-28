@@ -15,6 +15,7 @@ import Support from '../Pages/Support'
 import Comments from '../Pages/Comments'
 import Review from '../Pages/Review'
 import Confirmation from '../Pages/Confirmation'
+import Admin from '../Pages/Admin'
 
 function App() {
 
@@ -40,7 +41,6 @@ function App() {
         <header className='App-header'>
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
-          {/* <button onClick={testFunction}>Next</button> */}
         </header>
       <Route path='/' exact>
         <Home  />
@@ -70,6 +70,9 @@ function App() {
       </Route>
       <Route path='/confirmation' exact>
         <Confirmation />
+      </Route>
+      <Route path='/admin' exact>
+        <Admin />
       </Route>
       </div>
     </Router>
